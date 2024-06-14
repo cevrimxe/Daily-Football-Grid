@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Arka plan rengini gri tonunda yap */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 10px; /* Grid hücrelerinin kenar boşluklarını belirler */
+    max-width: 600px; /* Grid konteynerinin maksimum genişliğini ayarlar */
+    margin: 0 auto; /* Grid konteynerini ortalar */
+}
+
+.grid div {
+    border: 1px solid #ccc;
+    display: flex; /* Hücre içeriğini dikey ve yatay olarak ortalamak için */
+    justify-content: center; /* İçeriği yatay eksende ortala */
+    align-items: center; /* İçeriği dikey eksende ortala */
+    overflow: hidden; /* Grid hücresi dışına taşan içeriği kesmek için */
+    position: relative; /* Mutlak pozisyonlama için */
+    height: 150px; /* Hücrelerin sabit yüksekliğini belirle */
+}
+
+.grid img {
+    max-width: 100%; /* Görselin maksimum genişliğini ayarla */
+    max-height: 100%; /* Görselin maksimum yüksekliğini ayarla */
+    object-fit: contain; /* Görseli hücreye tam olarak sığdır */
+    border: 0px solid #ccc; /* Kenara 1 piksel kalınlığında bir çerçeve ekle */
+}
+
+
+.prediction {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prediction input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.prediction button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.prediction button:hover {
+    background-color: #0056b3;
+}
