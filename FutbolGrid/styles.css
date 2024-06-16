@@ -1,32 +1,98 @@
+/* Modal stil ayarları */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px; 
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Diğer stil ayarları burada */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Arka plan rengini gri tonunda yap */
+    background-color: #f0f0f0;
+    text-align: center; 
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-    padding: 10px; /* Grid hücrelerinin kenar boşluklarını belirler */
-    max-width: 600px; /* Grid konteynerinin maksimum genişliğini ayarlar */
-    margin: 0 auto; /* Grid konteynerini ortalar */
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* Varsayılan grid hücresi stili */
 .grid div {
     border: 1px solid #ccc;
-    display: flex; /* Hücre içeriğini dikey ve yatay olarak ortalamak için */
-    justify-content: center; /* İçeriği yatay eksende ortala */
-    align-items: center; /* İçeriği dikey eksende ortala */
-    overflow: hidden; /* Grid hücresi dışına taşan içeriği kesmek için */
-    position: relative; /* Mutlak pozisyonlama için */
-    height: 150px; /* Hücrelerin sabit yüksekliğini belirle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: #fff;
 }
 
+/* Kare şeklindeki resimler */
 .grid img {
-    max-width: 100%; /* Görselin maksimum genişliğini ayarla */
-    max-height: 100%; /* Görselin maksimum yüksekliğini ayarla */
-    object-fit: contain; /* Görseli hücreye tam olarak sığdır */
-    border: 0px solid #ccc; /* Kenara 1 piksel kalınlığında bir çerçeve ekle */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 0px solid #ccc;
+}
+
+/* Özel hücre stili (örneğin, dikdörtgen) */
+.special-cell {
+    height: 150px;
+    width: 300px;
+}
+
+.special-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Resmi tam olarak hücreye sığdır */
+    object-position: center;
 }
 
 
